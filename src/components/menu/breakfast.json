@@ -1,0 +1,20 @@
+{
+    "breakfast": [
+        {
+            "name": "Cafe americano",
+            "value": 500
+        },
+        {
+            "name": "Cafe con leche vegetal",
+            "value": 700
+        },
+        {
+            "name": "Sandwich de tofu y palta",
+            "value": 1000
+        },
+        {
+            "name": "Jugo natural",
+            "value": 700
+        }
+    ]
+}
