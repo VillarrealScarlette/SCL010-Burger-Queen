@@ -8,10 +8,15 @@ class Lunch extends React.Component {
       lunch
     }
   }
+  //f(x) que captura el nombre de la opción seleccionada
+  select(e) {
+    console.log(e.target.value);
+  }
+
   render() { 
     const lunchs = this.state.lunch.map((item, i) => {
       return (
-        <button className="menu-card">
+        <button className="menu-card" onClick={this.select} value={item.name}>
           {item.name}
         </button>
       )
