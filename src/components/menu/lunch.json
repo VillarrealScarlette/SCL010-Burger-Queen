@@ -1,0 +1,60 @@
+{
+    "lunch": [
+            {
+                "name": "SIMPLE Quinoa",
+                "cost": 1500
+            },
+            {
+                "name": "SIMPLE Lentejas",
+                "cost": 1500
+            },
+            {
+                "name": "SIMPLE Seitán",
+                "cost": 1500
+            },
+            {
+                "name": "DOBLE Quinoa",
+                "cost": 2500
+            },
+            {
+                "name": "DOBLE Lentejas",
+                "cost": 2500
+            },
+            {
+                "name": "DOBLE Seitán",
+                "cost": 2500
+            },
+            {
+                "name": "+ Queso Vegano",
+                "cost": 500
+            },
+            {
+                "name": "+ Palta",
+                "cost": 500
+            },
+            {
+                "name": "Papas Fritas",
+                "cost": 500
+            },
+            {
+                "name": "Onion Rings",
+                "cost": 500
+            },
+            {
+                "name": "Agua 500ml",
+                "cost": 500
+            },
+            {
+                "name": "Agua 750ml",
+                "cost": 800
+            },
+            {
+                "name": "Gaseosa 500ml",
+                "cost": 700
+            },
+            {
+                "name": "Gaseosa 750ml",
+                "cost": 1000
+            }
+    ]
+}
