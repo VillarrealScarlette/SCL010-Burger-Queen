@@ -5,7 +5,9 @@ class Lunch extends React.Component {
   constructor() {
     super();
     this.state = {
-      lunch
+      burger: lunch.burgers,
+      sideDish: lunch.sideDishs,
+      drink: lunch.drinks,
     }
   }
   //f(x) que captura el nombre de la opción seleccionada
@@ -14,37 +16,40 @@ class Lunch extends React.Component {
   }
 
   render() { 
-    const lunchs = this.state.lunch.map((item, i) => {
+    const burgers = this.state.burger.map((item) => {
       return (
-        <button className="menu-card" onClick={this.select} value={item.name}>
+        <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
+          {item.name}
+        </button>
+      )
+    })
+    const sideDishs = this.state.sideDish.map((item, i) => {
+      return (
+        <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
+          {item.name}
+        </button>
+      )
+    })
+    const drinks = this.state.drink.map((item, i) => {
+      return (
+        <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
         </button>
       )
     })
     return ( 
       <div>
-        <div className="burgers">
+        <div>
         <h5>Hamburgesas</h5>
-        {lunchs[0]}
-        {lunchs[1]}
-        {lunchs[2]}
-        {lunchs[3]}
-        {lunchs[4]}
-        {lunchs[5]}
-        {lunchs[6]}
-        {lunchs[7]}
+        {burgers}
         </div>
-        <div className="side-dishs">
+        <div>
         <h5>Acompañamientos</h5>
-        {lunchs[8]}
-        {lunchs[9]}
+        {sideDishs}
         </div>
-        <div className="drinks">
+        <div>
         <h5>Bebestibles</h5>
-        {lunchs[10]}
-        {lunchs[11]}
-        {lunchs[12]}
-        {lunchs[13]}
+        {drinks}
         </div>
       </div>
      );
