@@ -1,5 +1,6 @@
 {
-    "lunch": [
+    "lunch": {
+        "burgers": [
             {
                 "name": "SIMPLE Quinoa",
                 "cost": 1500
@@ -31,7 +32,9 @@
             {
                 "name": "+ Palta",
                 "cost": 500
-            },
+            }
+        ],
+        "sideDishs": [
             {
                 "name": "Papas Fritas",
                 "cost": 500
@@ -39,7 +42,9 @@
             {
                 "name": "Onion Rings",
                 "cost": 500
-            },
+            }
+        ],
+        "drinks": [
             {
                 "name": "Agua 500ml",
                 "cost": 500
@@ -56,5 +61,6 @@
                 "name": "Gaseosa 750ml",
                 "cost": 1000
             }
-    ]
+        ]
+    }
 }

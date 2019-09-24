@@ -15,9 +15,9 @@ class Breakfast extends React.Component {
   }
 
   render() { 
-    const breakfasts = this.state.breakfast.map((item, i) => {
+    const breakfasts = this.state.breakfast.map((item) => {
       return (
-        <button className="menu-card" onClick={this.select} value={item.name}>
+        <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
         </button>
       )
