@@ -1,5 +1,23 @@
 {
-    "lunch": {
+    "menu": {
+        "breakfast": [
+            {
+                "name": "Cafe americano",
+                "cost": 500
+            },
+            {
+                "name": "Cafe con leche vegetal",
+                "cost": 700
+            },
+            {
+                "name": "Sandwich de tofu y palta",
+                "cost": 1000
+            },
+            {
+                "name": "Jugo natural",
+                "cost": 700
+            }
+        ],
         "burgers": [
             {
                 "name": "SIMPLE Quinoa",
