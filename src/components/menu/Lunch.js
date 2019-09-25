@@ -1,36 +1,36 @@
 import React from 'react';
-import {lunch} from './lunch.json';
+import { menu } from './menu.json';
 
 class Lunch extends React.Component {
   constructor() {
     super();
     this.state = {
-      burger: lunch.burgers,
-      sideDish: lunch.sideDishs,
-      drink: lunch.drinks,
+      burger: menu.burgers,
+      sideDish: menu.sideDishs,
+      drink: menu.drinks,
     }
   }
   //f(x) que captura el nombre de la opción seleccionada
-  select(e) {
+  select = (e) => {
     console.log(e.target.value);
   }
 
   render() { 
-    const burgers = this.state.burger.map((item) => {
+    const burgersOptions = this.state.burger.map((item) => {
       return (
         <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
         </button>
       )
     })
-    const sideDishs = this.state.sideDish.map((item, i) => {
+    const sideDishsOptions = this.state.sideDish.map((item, i) => {
       return (
         <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
         </button>
       )
     })
-    const drinks = this.state.drink.map((item, i) => {
+    const drinksOptions = this.state.drink.map((item, i) => {
       return (
         <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
@@ -41,15 +41,15 @@ class Lunch extends React.Component {
       <div>
         <div>
         <h5>Hamburgesas</h5>
-        {burgers}
+        {burgersOptions}
         </div>
         <div>
         <h5>Acompañamientos</h5>
-        {sideDishs}
+        {sideDishsOptions}
         </div>
         <div>
         <h5>Bebestibles</h5>
-        {drinks}
+        {drinksOptions}
         </div>
       </div>
      );

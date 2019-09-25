@@ -1,30 +1,35 @@
 import React from 'react';
-import { breakfast } from './breakfast.json';
+import { menu } from './menu.json';
+import Counter from './Counter.js';
 import './menu.css';
 
 class Breakfast extends React.Component {
   constructor() {
     super();
     this.state = {
-      breakfast
+      breakfasts: menu.breakfast
     }
   }
   //f(x) que captura el nombre de la opción seleccionada
-  select(e) {
+  select = (e) => {
     console.log(e.target.value);
   }
 
   render() { 
-    const breakfasts = this.state.breakfast.map((item) => {
+    const breakfastOptions = this.state.breakfasts.map((item) => {
       return (
-        <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
+        <button className="button-menu" 
+        key={item.name} onClick={this.select} value={item.name}>
           {item.name}
         </button>
       )
     })
     return ( 
       <div>
-        {breakfasts}
+        {breakfastOptions}
+        <div>
+          <Counter />
+        </div>
       </div>
      );
   }
