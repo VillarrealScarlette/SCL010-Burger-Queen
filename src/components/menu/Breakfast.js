@@ -1,6 +1,9 @@
 import React from 'react';
 import { breakfast } from './breakfast.json';
-import './menu.css';
+
+import Button from '@material-ui/core/Button';
+//import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 
 class Breakfast extends React.Component {
   constructor() {
@@ -17,14 +20,16 @@ class Breakfast extends React.Component {
   render() { 
     const breakfasts = this.state.breakfast.map((item) => {
       return (
-        <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
+        <Grid item xs>
+         <Button variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
-        </button>
+        </Button>
+        </Grid>
       )
     })
     return ( 
       <div>
-        {breakfasts}
+         <Grid container spacing={1}>{breakfasts}</Grid>   
       </div>
      );
   }
