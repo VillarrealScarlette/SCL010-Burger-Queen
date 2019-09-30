@@ -1,5 +1,33 @@
 {
-    "lunch": {
+    "menu": {
+        "coffe": [
+            {
+                "name": "americano",
+                "cost": 500
+            },
+            {
+                "name": "expresso",
+                "cost": 500
+            },
+            {
+                "name": "latte",
+                "cost": 700
+            }
+        ],
+        "sandwish": [  
+            {
+                "name": "Tofu",
+                "cost": 1000
+            }, 
+            {
+                "name": "Seitan",
+                "cost": 1000
+            },
+            {
+                "name": "Soya",
+                "cost": 1000
+            }     
+        ],
         "burgers": [
             {
                 "name": "SIMPLE Quinoa",
@@ -14,6 +42,10 @@
                 "cost": 1500
             },
             {
+                "name": "SIMPLE Soya",
+                "cost": 1500
+            },
+            {
                 "name": "DOBLE Quinoa",
                 "cost": 2500
             },
@@ -23,6 +55,10 @@
             },
             {
                 "name": "DOBLE Seitán",
+                "cost": 2500
+            },
+            {
+                "name": "DOBLE Soya",
                 "cost": 2500
             },
             {
@@ -60,6 +96,10 @@
             {
                 "name": "Gaseosa 750ml",
                 "cost": 1000
+            },
+            {
+                "name": "Jugo natural",
+                "cost": 700
             }
         ]
     }

@@ -1,0 +1,99 @@
+ const db = firebase.firestore();
+  let productos=[
+    {
+      "name": "Cafe americano",
+      "cost": 500,
+      "type": "breakfast"
+  },
+  {
+      "name": "Cafe con leche vegetal",
+      "cost": 700,
+      "type": "breakfast"
+  },
+  {
+      "name": "Sandwich de tofu y palta",
+      "cost": 1000,
+      "type": "breakfast"
+      
+  },
+  {
+      "name": "Jugo natural",
+      "cost": 700,
+      "type": "breakfast"
+  },
+  {
+      "name": "SIMPLE Quinoa",
+      "cost": 1500,
+      "type": "burgers"
+  },
+  {
+      "name": "SIMPLE Lentejas",
+      "cost": 1500,
+      "type": "burgers"
+  },
+  {
+      "name": "SIMPLE Seitán",
+      "cost": 1500,
+      "type": "burgers"
+  },
+  {
+      "name": "DOBLE Quinoa",
+      "cost": 2500,
+      "type": "burgers"
+  },
+  {
+      "name": "DOBLE Lentejas",
+      "cost": 2500,
+      "type": "burgers"
+  },
+  {
+      "name": "DOBLE Seitán",
+      "cost": 2500,
+      "type": "burgers"
+  },
+  {
+      "name": "+ Queso Vegano",
+      "cost": 500,
+      "type": "burgers"
+  },
+  {
+      "name": "+ Palta",
+      "cost": 500,
+      "type": "burgers"
+  },
+  {
+      "name": "Papas Fritas",
+      "cost": 500,
+      "type": "sideDishs"
+  },
+  {
+      "name": "Onion Rings",
+      "cost": 500,
+      "type": "sideDishs"
+  },
+  {
+      "name": "Agua 500ml",
+      "cost": 500,
+      "type": "drinks"
+  },
+  {
+      "name": "Agua 750ml",
+      "cost": 800,
+      "type": "drinks"
+  },
+  {
+      "name": "Gaseosa 500ml",
+      "cost": 700,
+      "type": "drinks"
+  },
+  {
+      "name": "Gaseosa 750ml",
+      "cost": 1000,
+      "type": "drinks"
+  }  
+  ]
+
+  productos.forEach(producto=>{
+    // colección creada
+  db.collection("productos").add(producto)
+  })

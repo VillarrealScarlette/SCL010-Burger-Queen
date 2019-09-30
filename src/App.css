@@ -1,0 +1,36 @@
+
+.title {
+    text-align: justify;
+    background-color: #839DE1;
+    margin-top: 0px;
+    margin-right: 0 px;
+    margin-left: 0 px;
+    margin-bottom: 0px;
+    color:#ffffff;
+    padding: 2px;
+}
+.barMenu {
+    text-align: justify;
+    background-color: #F8EFEF;
+    margin-top: 0px;
+    margin-right: 0 px;
+    margin-left: 0 px;
+    margin-bottom: 0px;
+    color:#000000;
+    padding: 2px;
+
+}
+.names{
+    font-size: 400px;
+}
+
+.barMenu2{
+    text-align: justify;
+    background-color: #C4C4C4;
+    margin-top: 0px;
+    margin-right: 0 px;
+    margin-left: 0 px;
+    margin-bottom: 10px;
+    color:#000000;
+    padding: 2px;
+}

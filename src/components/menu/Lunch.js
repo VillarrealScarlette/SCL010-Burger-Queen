@@ -1,59 +1,69 @@
 import React from 'react';
-import {lunch} from './lunch.json';
+import Button from '@material-ui/core/Button';
+//import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import { menu } from './menu.json';
 
-class Lunch extends React.Component {
+export default class Lunch extends React.Component {
   constructor() {
     super();
     this.state = {
-      burger: lunch.burgers,
-      sideDish: lunch.sideDishs,
-      drink: lunch.drinks,
+      burger: menu.burgers,
+      sideDish: menu.sideDishs,
+      drink: menu.drinks,
     }
   }
+
   //f(x) que captura el nombre de la opción seleccionada
-  select(e) {
+  select = (e) => {
     console.log(e.target.value);
   }
 
   render() { 
-    const burgers = this.state.burger.map((item) => {
+    const burgersOptions = this.state.burger.map((item) => {
       return (
-        <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
+        <Grid item xs>
+         <Button variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
-        </button>
+          </Button>
+          </Grid>
+        
       )
     })
-    const sideDishs = this.state.sideDish.map((item, i) => {
+    const sideDishsOptions = this.state.sideDish.map((item, i) => {
       return (
-        <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
+        <Grid item xs>
+       <Button variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
-        </button>
+          </Button>
+          </Grid>
       )
     })
-    const drinks = this.state.drink.map((item, i) => {
+    const drinksOptions = this.state.drink.map((item, i) => {
       return (
-        <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
+        <Grid item xs>
+        <Button variant="contained" color="ffffff" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
-        </button>
+          </Button>
+          </Grid>
       )
     })
     return ( 
       <div>
         <div>
-        <h5>Hamburgesas</h5>
-        {burgers}
+        <h3>Hamburgesas</h3>
+        <Grid container spacing={1}>{burgersOptions}</Grid>
         </div>
         <div>
-        <h5>Acompañamientos</h5>
-        {sideDishs}
+        <h3>Acompañamientos</h3>
+        <Grid container spacing={1}>{sideDishsOptions}</Grid> 
         </div>
         <div>
-        <h5>Bebestibles</h5>
-        {drinks}
+        <h3>Bebestibles</h3>
+        <Grid container spacing={1}>{drinksOptions}</Grid> 
         </div>
       </div>
      );
   }
 }
 
-export default Lunch;

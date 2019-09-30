@@ -1,33 +1,55 @@
 import React from 'react';
-import { breakfast } from './breakfast.json';
+import Button from '@material-ui/core/Button';
+//import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+//import Paper from '@material-ui/core/Paper';
+import { menu } from './menu.json';
 import './menu.css';
 
-class Breakfast extends React.Component {
+export default class Breakfast extends React.Component {
   constructor() {
     super();
     this.state = {
-      breakfast
+      coffe: menu.coffe,
+      sandwish: menu.sandwish,
     }
   }
   //f(x) que captura el nombre de la opción seleccionada
-  select(e) {
+  select = (e) => {
     console.log(e.target.value);
   }
 
   render() { 
-    const breakfasts = this.state.breakfast.map((item) => {
+    const coffeOptions = this.state.coffe.map((item) => {
       return (
-        <button className="button-menu" key={item.name} onClick={this.select} value={item.name}>
+        <Grid item xs>
+         <Button variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
-        </button>
+          </Button>
+          </Grid>
+        
+      )
+    })
+    const sandwishOptions = this.state.sandwish.map((item, i) => {
+      return (
+        <Grid item xs>
+       <Button variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
+          {item.name}
+          </Button>
+          </Grid>
       )
     })
     return ( 
       <div>
-        {breakfasts}
+        <div>
+        <h5>cafe</h5>
+        <Grid container spacing={1}>{coffeOptions}</Grid>
+        </div>
+        <div>
+        <h5>sandwish</h5>
+        <Grid container spacing={1}>{sandwishOptions}</Grid> 
+        </div>
       </div>
      );
   }
 }
-
-export default Breakfast;

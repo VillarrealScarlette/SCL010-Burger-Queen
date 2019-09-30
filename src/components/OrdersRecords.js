@@ -5,7 +5,7 @@ class OrdersRecords extends React.Component {
   render() { 
     return ( 
       <div>
-        <h2>Hel historial de todos los pedidos realizados</h2>
+        <h2>Historial de todos los pedidos realizados</h2>
       </div>
      );
   }
