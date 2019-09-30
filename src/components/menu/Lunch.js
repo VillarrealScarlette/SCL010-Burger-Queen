@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { menu } from './menu.json';
 
-class Lunch extends React.Component {
+export default class Lunch extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -51,15 +51,15 @@ class Lunch extends React.Component {
     return ( 
       <div>
         <div>
-        <h5>Hamburgesas</h5>
+        <h3>Hamburgesas</h3>
         <Grid container spacing={1}>{burgersOptions}</Grid>
         </div>
         <div>
-        <h5>Acompañamientos</h5>
+        <h3>Acompañamientos</h3>
         <Grid container spacing={1}>{sideDishsOptions}</Grid> 
         </div>
         <div>
-        <h5>Bebestibles</h5>
+        <h3>Bebestibles</h3>
         <Grid container spacing={1}>{drinksOptions}</Grid> 
         </div>
       </div>
@@ -67,4 +67,3 @@ class Lunch extends React.Component {
   }
 }
 
-export default Lunch;

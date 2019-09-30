@@ -1,22 +1,32 @@
 {
     "menu": {
-        "breakfast": [
+        "coffe": [
             {
-                "name": "Cafe americano",
+                "name": "americano",
                 "cost": 500
             },
             {
-                "name": "Cafe con leche vegetal",
-                "cost": 700
+                "name": "expresso",
+                "cost": 500
             },
             {
-                "name": "Sandwich de tofu y palta",
+                "name": "latte",
+                "cost": 700
+            }
+        ],
+        "sandwish": [  
+            {
+                "name": "Tofu",
+                "cost": 1000
+            }, 
+            {
+                "name": "Seitan",
                 "cost": 1000
             },
             {
-                "name": "Jugo natural",
-                "cost": 700
-            }
+                "name": "Soya",
+                "cost": 1000
+            }     
         ],
         "burgers": [
             {
@@ -32,6 +42,10 @@
                 "cost": 1500
             },
             {
+                "name": "SIMPLE Soya",
+                "cost": 1500
+            },
+            {
                 "name": "DOBLE Quinoa",
                 "cost": 2500
             },
@@ -41,6 +55,10 @@
             },
             {
                 "name": "DOBLE Seitán",
+                "cost": 2500
+            },
+            {
+                "name": "DOBLE Soya",
                 "cost": 2500
             },
             {
@@ -78,6 +96,10 @@
             {
                 "name": "Gaseosa 750ml",
                 "cost": 1000
+            },
+            {
+                "name": "Jugo natural",
+                "cost": 700
             }
         ]
     }
