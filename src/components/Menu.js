@@ -3,7 +3,7 @@ import '../App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Breakfast from './menu/Breakfast';
 import Lunch from './menu/Lunch';
-import Total from './menu/Lunch';
+import Total from './menu/Total';
 import Foods from './menu/Breakfast';
 
 export default class Menu extends React.Component {
@@ -24,6 +24,13 @@ export default class Menu extends React.Component {
     let addToTotal = this.state.food[foodIndex].price;
     let newTotal = currentTotal + addToTotal;
     this.setState({total: newTotal})
+  }
+
+  showName = () => {
+    let foodName = this.state.food.map((item) => {
+      return item.name
+    });
+    return foodName;
   }
 
   sentOrder = () => {
@@ -66,10 +73,7 @@ export default class Menu extends React.Component {
           {foods}
         </ul>
         <div>
-          <Total 
-          // name={this.state.food.map((food) => {
-          //   food.name
-          // })}
+          <Total
           total={this.state.total}
           click={() => this.sentOrder}/>
         </div>

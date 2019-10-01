@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 // import Button from '@material-ui/core/Button';
 // //import Box from '@material-ui/core/Box';
 // import Grid from '@material-ui/core/Grid';
@@ -66,14 +66,3 @@ import React from 'react';
 //      );
 //   }
 // }
-
-const total = (props) => {
-  return (
-    <div>
-      <h3>{props.total}</h3>
-      <button onClick={props.click}>Sent order</button>
-    </div>
-  )
-}
-
-export default total;
