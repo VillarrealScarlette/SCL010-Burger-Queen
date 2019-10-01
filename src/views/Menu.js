@@ -1,8 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Breakfast from './menu/Breakfast';
-import Lunch from './menu/Lunch';
+import Breakfast from '../components/menu/Breakfast';
+import Lunch from '../components/menu/Lunch';
 
 //importando material-iu
 import Tabs from '@material-ui/core/Tabs';
@@ -27,36 +27,54 @@ const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
+    
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     width: 200,
-  },
-  
+   
+  },  
 }));
 
-function createData(products, price) {
+/*function createData(products, price) {
   return {products, price };
 }
 
-const rows = [
+/*const rows = [
   createData('Frozen yoghurt', 1500),
   createData('Ice cream sandwich', 1500),
 
 ];
 
-/*function addRows(product){
+/*
+function (product){
   rows.add(product);
 }*/
 
-function Menu() {
+const Menu = () => {
+
+
+  // useEffect(() => {
+  //   setRows([
+  //     createData('Frozen yoghurt', 1500),
+  //     createData('Ice cream sandwich', 1500),
+  //   ])
+  // },[])
+
   const classes = useStyles();
   const [values, setValues] = React.useState({
   });
   const handleChange = name => event => {
     setValues({ ...values, [name]: event.target.value });
   };
+
+  const [rows, setRows]=useState([])
+  const addRow = name => event => {
+    setRows({ ...rows, [name]: event.target.value } );
+  };
+
+  
   
   return (
   <Router>
@@ -68,7 +86,7 @@ function Menu() {
         <LinkTab label="almuerzo" to="/menu/lunch"/>  
       </Tabs>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={5}>
       <form className={classes.container} noValidate autoComplete="off">
       <TextField
         className={classes.textField}
@@ -78,23 +96,24 @@ function Menu() {
         margin="normal"
       />
          <TextField
-        className={classes.textField}
-        id="waiter"
-        label="Mesa"
-        onChange={handleChange('name')}
-        margin="normal"
+         className={classes.textField}
+         id="waiter"
+         label="Mesa"
+         onChange={handleChange('name')}
+         margin="normal"
       />
        </form>
-       <Route path="/menu/breakfast" component={Breakfast} />
+       <Route path="/menu/breakfast" component={Breakfast} set={addRow.bind}  />
        <Route path="/menu/lunch" component={Lunch}/>
        </Grid>
+       <Grid item xs={1}></Grid>
        <Grid item xs={6}>
        <Paper className={classes.root}>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
             <TableCell>Productos</TableCell>
-            <TableCell>Precio</TableCell>
+            <TableCell>Valor</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

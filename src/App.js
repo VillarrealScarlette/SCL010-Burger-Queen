@@ -11,15 +11,14 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 //importando los componentes
-import Menu from './components/Menu';
-import OrdersReady from './components/OrdersReady';
-import OrdersRecords from './components/OrdersRecords';
-import OrdesInKitchen from './components/OrdesInKitchen';
+import Menu from './views/Menu';
+import OrdersReady from './views/OrdersReady';
+import OrdersRecords from './views/OrdersRecords';
+import OrdesInKitchen from './views/OrdesInKitchen';
 
 
 function LinkTab(props) {
-  return (
-    
+  return ( 
     <Tab component={Link} {...props}/>
   );
 }

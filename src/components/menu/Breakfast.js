@@ -1,14 +1,12 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-//import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-//import Paper from '@material-ui/core/Paper';
-import { menu } from './menu.json';
+import { menu } from '../../data/menu.json';
 import './menu.css';
 
 export default class Breakfast extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       coffe: menu.coffe,
       sandwish: menu.sandwish,
@@ -17,15 +15,25 @@ export default class Breakfast extends React.Component {
   }
   //f(x) que captura el nombre de la opción seleccionada
   select = (e) => {
-    this.setState({mycoffe: this.state.coffe[0].cost})
-    console.log("uno", e.target.value, "dos", e.target);
+
+    let rows = this.props.rows;
+    rows.add({
+      products:e.target.value,
+      price:""
+    })
+    this.props.set(rows);
+    console.log(e.target.value);
+
+//    this.setState({mycoffe: this.state.coffe[0].cost})
+//    console.log("uno", e.target.value, "dos", e.target);
+
   }
 
   render() { 
     const coffeOptions = this.state.coffe.map((item) => {
       return (
         <Grid item xs>
-         <Button variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
+         <Button variant="contained" color="#ffffff" key={item.name} onClick={this.props.set} value={item.name}>
           {item.name}
           </Button>
           </Grid>
@@ -35,7 +43,7 @@ export default class Breakfast extends React.Component {
     const sandwishOptions = this.state.sandwish.map((item) => {
       return (
         <Grid item xs>
-       <Button variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
+       <Button label="pr" variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
           {item.name}
           </Button>
           </Grid>

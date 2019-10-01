@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 //import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import { menu } from './menu.json';
+import { menu } from '../../data/menu.json';
 
 export default class Lunch extends React.Component {
   constructor() {
