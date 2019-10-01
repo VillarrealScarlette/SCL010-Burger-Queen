@@ -4,7 +4,7 @@ const db = firebase.firestore();
 const data = db.collection('productos');
 
 
-obtener datos de firebase  
+//obtener datos de firebase  
 export const retrieve=(type)=>{
 
   return new Promise((resolve, reject) => {
