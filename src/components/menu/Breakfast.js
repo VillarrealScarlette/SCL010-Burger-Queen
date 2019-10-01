@@ -12,11 +12,13 @@ export default class Breakfast extends React.Component {
     this.state = {
       coffe: menu.coffe,
       sandwish: menu.sandwish,
-    }
+      mycoffe: " "
+    };
   }
   //f(x) que captura el nombre de la opción seleccionada
   select = (e) => {
-    console.log(e.target.value);
+    this.setState({mycoffe: this.state.coffe[0].cost})
+    console.log("uno", e.target.value, "dos", e.target);
   }
 
   render() { 
@@ -30,7 +32,7 @@ export default class Breakfast extends React.Component {
         
       )
     })
-    const sandwishOptions = this.state.sandwish.map((item, i) => {
+    const sandwishOptions = this.state.sandwish.map((item) => {
       return (
         <Grid item xs>
        <Button variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
@@ -39,7 +41,9 @@ export default class Breakfast extends React.Component {
           </Grid>
       )
     })
+    
     return ( 
+    
       <div>
         <div>
         <h5>cafe</h5>
