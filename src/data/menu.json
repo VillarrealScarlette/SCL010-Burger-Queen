@@ -1,106 +1,127 @@
 {
-    "menu": {
-        "coffe": [
-            {
-                "name": "americano",
-                "cost": 500
-            },
-            {
-                "name": "expresso",
-                "cost": 500
-            },
-            {
-                "name": "latte",
-                "cost": 700
-            }
-        ],
-        "sandwish": [  
-            {
-                "name": "Tofu",
-                "cost": 1000
-            }, 
-            {
-                "name": "Seitan",
-                "cost": 1000
-            },
-            {
-                "name": "Soya",
-                "cost": 1000
-            }     
-        ],
-        "burgers": [
-            {
-                "name": "SIMPLE Quinoa",
-                "cost": 1500
-            },
-            {
-                "name": "SIMPLE Lentejas",
-                "cost": 1500
-            },
-            {
-                "name": "SIMPLE Seitán",
-                "cost": 1500
-            },
-            {
-                "name": "SIMPLE Soya",
-                "cost": 1500
-            },
-            {
-                "name": "DOBLE Quinoa",
-                "cost": 2500
-            },
-            {
-                "name": "DOBLE Lentejas",
-                "cost": 2500
-            },
-            {
-                "name": "DOBLE Seitán",
-                "cost": 2500
-            },
-            {
-                "name": "DOBLE Soya",
-                "cost": 2500
-            },
-            {
-                "name": "+ Queso Vegano",
-                "cost": 500
-            },
-            {
-                "name": "+ Palta",
-                "cost": 500
-            }
-        ],
-        "sideDishs": [
-            {
-                "name": "Papas Fritas",
-                "cost": 500
-            },
-            {
-                "name": "Onion Rings",
-                "cost": 500
-            }
-        ],
-        "drinks": [
-            {
-                "name": "Agua 500ml",
-                "cost": 500
-            },
-            {
-                "name": "Agua 750ml",
-                "cost": 800
-            },
-            {
-                "name": "Gaseosa 500ml",
-                "cost": 700
-            },
-            {
-                "name": "Gaseosa 750ml",
-                "cost": 1000
-            },
-            {
-                "name": "Jugo natural",
-                "cost": 700
-            }
-        ]
-    }
+    "coffee": [
+        {
+            "name": "americano",
+            "price": 500,
+            "id": 1
+        },
+        {
+            "name": "expresso",
+            "price": 500,
+            "id": 2
+        },
+        {
+            "name": "latte",
+            "price": 700,
+            "id": 3
+        }
+    ],
+    "sandwiches": [  
+        {
+            "name": "Tofu",
+            "price": 1000,
+            "id": 4
+        }, 
+        {
+            "name": "Seitan",
+            "price": 1000,
+            "id": 5
+        },
+        {
+            "name": "Soya",
+            "price": 1000,
+            "id": 6
+        }     
+    ],
+    "burgers": [
+        {
+            "name": "SIMPLE Quinoa",
+            "price": 1500,
+            "id": 7
+        },
+        {
+            "name": "SIMPLE Lentejas",
+            "price": 1500,
+            "id": 8
+        },
+        {
+            "name": "SIMPLE Seitán",
+            "price": 1500,
+            "id": 9
+        },
+        {
+            "name": "SIMPLE Soya",
+            "price": 1500,
+            "id": 10
+        },
+        {
+            "name": "DOBLE Quinoa",
+            "price": 2500,
+            "id": 11
+        },
+        {
+            "name": "DOBLE Lentejas",
+            "price": 2500,
+            "id": 12
+        },
+        {
+            "name": "DOBLE Seitán",
+            "price": 2500,
+            "id": 13
+        },
+        {
+            "name": "DOBLE Soya",
+            "price": 2500,
+            "id": 14
+        },
+        {
+            "name": "+ Queso Vegano",
+            "price": 500,
+            "id": 15
+        },
+        {
+            "name": "+ Palta",
+            "price": 500,
+            "id": 16
+        }
+    ],
+    "sideDishes": [
+        {
+            "name": "Papas Fritas",
+            "price": 500,
+            "id": 17
+        },
+        {
+            "name": "Onion Rings",
+            "price": 500,
+            "id": 18
+        }
+    ],
+    "drinks": [
+        {
+            "name": "Agua 500ml",
+            "price": 500,
+            "id": 19
+        },
+        {
+            "name": "Agua 750ml",
+            "price": 800,
+            "id": 20
+        },
+        {
+            "name": "Gaseosa 500ml",
+            "price": 700,
+            "id": 21
+        },
+        {
+            "name": "Gaseosa 750ml",
+            "price": 1000,
+            "id": 22
+        },
+        {
+            "name": "Jugo natural",
+            "price": 700,
+            "id": 23
+        }
+    ]
 }

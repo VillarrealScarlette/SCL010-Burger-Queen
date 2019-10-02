@@ -67,3 +67,10 @@ export default class Lunch extends React.Component {
   }
 }
 
+export const BtnOptions = (props) => {
+  return (
+    <div>
+      <Button>{props.name}</Button>
+    </div>
+  )
+}

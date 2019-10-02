@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import { menu } from '../../data/menu.json';
-import './menu.css';
+import { BtnOptions } from './Lunch';
+// import Button from '@material-ui/core/Button';
+// import Grid from '@material-ui/core/Grid';
+import { coffee, sandwiches } from '../../data/menu.json';
 
 
   const coffe = menu.coffe
