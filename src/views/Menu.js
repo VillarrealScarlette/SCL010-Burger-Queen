@@ -16,6 +16,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 
 function LinkTab(props) {
   return (
@@ -83,8 +84,8 @@ const Menu = () => {
       <Grid item xs={12}>
       <Tabs className="barMenu2" variant="fullWidth" aria-label="nav tabs example">
         <LinkTab label="desayuno" to={"/menu/breakfast"}/>
-        <LinkTab label="almuerzo" to="/menu/lunch"/>  
-      </Tabs>
+        <LinkTab label="almuerzo" to="/menu/lunch"/>
+      </Tabs>    
       </Grid>
       <Grid item xs={5}>
       <form className={classes.container} noValidate autoComplete="off">
@@ -108,6 +109,7 @@ const Menu = () => {
        </Grid>
        <Grid item xs={1}></Grid>
        <Grid item xs={6}>
+       <Button>Enviar Pedido</Button> 
        <Paper className={classes.root}>
       <Table className={classes.table}>
         <TableHead>

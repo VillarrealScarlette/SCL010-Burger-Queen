@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //importando material-iu
 import AppBar from '@material-ui/core/AppBar';
@@ -27,7 +28,7 @@ function LinkTab(props) {
   root: {
     flexGrow: 1,
   },
-});
+})
 
 function App() {
   
@@ -56,7 +57,7 @@ function App() {
           <LinkTab label="HISTORIAL" to="/ordersrecords"/>
         </Tabs>
       </AppBar>
-      </Grid> 
+      </Grid>
 
         <Route path="/menu" component={Menu}/>
         <Route path="/ordesinkitchen" component={OrdesInKitchen}/>
