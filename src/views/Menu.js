@@ -4,9 +4,7 @@ import '../App.css';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import LinkTab from './LinkTab';
 import Breakfast from '../components/menu/Breakfast';
-import Lunch from '../components/menu/Options';
-import LinkTab from './LinkTab';
-
+import Lunch from '../components/menu/Lunch';
 
 //importando material-iu
 import Tabs from '@material-ui/core/Tabs';
@@ -47,7 +45,7 @@ class Menu extends Component {
   addOrders = (e) => {
       let orders=this.state.rows;
       orders.push({products:e.name,
-      price:e.cost});
+      price:e.price});
     this.setState({rows:orders});
 }
   render() {
