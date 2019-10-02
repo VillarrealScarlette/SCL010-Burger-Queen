@@ -23,7 +23,7 @@ export default class Lunch extends React.Component {
     const burgersOptions = this.state.burger.map((item) => {
       return (
         <Grid item xs>
-         <Button variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
+         <Button variant="contained" color="#ffffff" key={item.name} onClick={this.props.addOrder.bind(this, item)} value={item.name}>
           {item.name}
           </Button>
           </Grid>
@@ -33,7 +33,7 @@ export default class Lunch extends React.Component {
     const sideDishsOptions = this.state.sideDish.map((item, i) => {
       return (
         <Grid item xs>
-       <Button variant="contained" color="#ffffff" key={item.name} onClick={this.select} value={item.name}>
+       <Button variant="contained" color="#ffffff" key={item.name} onClick={this.props.addOrder.bind(this, item)} value={item.name}>
           {item.name}
           </Button>
           </Grid>
@@ -42,7 +42,7 @@ export default class Lunch extends React.Component {
     const drinksOptions = this.state.drink.map((item, i) => {
       return (
         <Grid item xs>
-        <Button variant="contained" color="ffffff" key={item.name} onClick={this.select} value={item.name}>
+        <Button variant="contained" color="#ffffff" key={item.name} onClick={this.props.addOrder.bind(this, item)} value={item.name}>
           {item.name}
           </Button>
           </Grid>

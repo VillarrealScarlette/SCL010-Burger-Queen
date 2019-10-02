@@ -17,7 +17,6 @@ import OrdersReady from './views/OrdersReady';
 import OrdersRecords from './views/OrdersRecords';
 import OrdesInKitchen from './views/OrdesInKitchen';
 
-
 function LinkTab(props) {
   return ( 
     <Tab component={Link} {...props}/>
