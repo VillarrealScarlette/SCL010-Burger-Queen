@@ -1,53 +1,59 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import { menu } from '../../data/menu.json';
-import './menu.css';
+import { coffee, sandwiches } from '../../data/menu.json'
 
-
-  const coffe = menu.coffe
-  const sandwish = menu.sandwish
-  //f(x) que captura el nombre de la opción seleccionada
+  // const coffee = coffee
+  // const sandwich = sandwiches
 
   export default class Breakfast extends React.Component{ 
     constructor() {
       super();
       this.state = {
-        cofe: menu.cofe,
-        sandwish: menu.sandwish,
-      }
+        coffee: coffee,
+        sandwich: sandwiches
+      };
     }
+
     render() {
-    const coffeOptions = coffe.map((item) => {
+    const coffeOptions = this.state.coffee.map((item) => {
       return (
         <Grid item xs>
-         <Button variant="contained" color="#ffffff" key={item.name} onClick={this.props.addOrder.bind(this, item)} value={item.name}>
+         <Button 
+         variant="contained" 
+         color="#ffffff" 
+         key={item.id} 
+         onClick={this.props.addOrder.bind(this, item)} 
+         value={item.name}>
           {item.name}
           </Button>
-          </Grid>
-        
+        </Grid>
       )
     })
-    const sandwishOptions = sandwish.map((item, i) => {
+    const sandwishOptions = this.state.sandwich.map((item) => {
       return (
         <Grid item xs>
-      <Button variant="contained" color="#ffffff" key={item.name} onClick={this.props.addOrder.bind(this, item)} value={item.name}>
+          <Button 
+          variant="contained" 
+          color="#ffffff" key={item.id} 
+          onClick={this.props.addOrder.bind(this, item)} 
+          value={item.name}>
           {item.name}
           </Button>
-          </Grid>
+        </Grid>
       )
     })
     return ( 
       <div>
         <div>
-        <h5>cafe</h5>
-        <Grid container spacing={1}>{coffeOptions}</Grid>
+          <h5>Cafeteria</h5>
+          <Grid container spacing={1}>{coffeOptions}</Grid>
         </div>
         <div>
-        <h5>sandwish</h5>
-        <Grid container spacing={1}>{sandwishOptions}</Grid> 
+          <h5>Sandwiches</h5>
+          <Grid container spacing={1}>{sandwishOptions}</Grid> 
         </div>
-        </div>
+      </div>
     )
   }
 }
