@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-
+import firebase from '../data/firebase.js'
 import '../App.css';
 import { BrowserRouter as Router, Route} from "react-router-dom";
-import LinkTab from './LinkTab';
 import Breakfast from '../components/menu/Breakfast';
 import Lunch from '../components/menu/Lunch';
 
 //importando material-iu
+import LinkTab from './LinkTab';
 import Tabs from '@material-ui/core/Tabs';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
@@ -22,7 +22,11 @@ export default class Menu extends Component {
 
     state = {
     title:'placeholder title',
-    value:{},
+    state:"kitchen",
+    waiter:"",
+    table:"",
+    order:[],
+    value:"",
     container: {
         display: 'flex',
         flexWrap: 'wrap',        
@@ -36,9 +40,29 @@ export default class Menu extends Component {
 
   handleChange = name => event => {
     this.setState({value: {
-        name:event.target.value
+        name:event.target.value,
+        waiter:event.target.value,
+        table:event.target.value,
     }}); 
   };
+ /*orders=()=>{
+    let products=[
+    {
+     "waiter":this.state.waiter,
+     "table":this.state.table,
+     "state":this.state.state
+     }
+    ] 
+    return products
+    }
+  
+    send = (products) => {
+      const db = firebase.firestore();
+      products.forEach(orders=>{
+        // colección creada
+      db.collection("products").add(orders)
+      });
+    }*/
 
   changeTheWorld = (newTitle) => {
       this.setState({title:newTitle});
@@ -53,6 +77,17 @@ export default class Menu extends Component {
     let addToTotal = e.price;
     let newTotal = currentTotal + addToTotal;
     this.setState({total: newTotal})
+  }
+
+  sentOrder = () => {
+   let orderReady =
+    {order: this.state.rows,
+    waiter:this.state.waiter,
+    table:"hola",
+    state:"kitchen"
+    }
+    const db = firebase.firestore();
+    db.collection("orders").add(orderReady)
   }
 
   render() {
@@ -80,7 +115,7 @@ export default class Menu extends Component {
         />
           <TextField
           className={this.textField}
-          id="waiter"
+          id="table"
           label="Mesa"
           onChange={this.handleChange('name')}
           margin="normal"
@@ -111,7 +146,7 @@ export default class Menu extends Component {
           </TableBody>
         </Table>
       </Paper>
-      <Button>Enviar Pedido</Button>
+      <Button onClick={this.sentOrder}>Enviar Pedido</Button>
         </Grid> 
         </Grid>
     </div>
