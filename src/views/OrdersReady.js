@@ -1,9 +1,10 @@
 import React from 'react';
 import '../App.css';
 import retrieve from '../data/data.js';
+import firebase from '../data/firebase.js'
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import firebase from '../data/firebase.js'
+
 
 
 class OrdersReady extends React.Component {
@@ -20,7 +21,6 @@ class OrdersReady extends React.Component {
   }
   changeState=(e)=>{
     let id= e.currentTarget.value
-
     const db = firebase.firestore();
     const data = db.collection('orders');
     data.doc(id).set({
