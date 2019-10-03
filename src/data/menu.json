@@ -1,17 +1,17 @@
 {
     "coffee": [
         {
-            "name": "americano",
+            "name": "Americano",
             "price": 500,
             "id": 1
         },
         {
-            "name": "expresso",
+            "name": "Expresso",
             "price": 500,
             "id": 2
         },
         {
-            "name": "latte",
+            "name": "Veggie Latte",
             "price": 700,
             "id": 3
         }
