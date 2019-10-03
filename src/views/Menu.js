@@ -43,10 +43,10 @@ class Menu extends Component {
   changeTheWorld = (newTitle) => {
       this.setState({title:newTitle});
   }
-  addOrders = (e) => {
+  addOrders = (item) => {
       let orders=this.state.rows;
-      orders.push({products:e.name,
-      price:e.cost});
+      orders.push({products:item.name,
+      price:item.cost});
     this.setState({rows:orders});
 }
   render() {

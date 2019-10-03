@@ -5,16 +5,18 @@ const data = db.collection('orders');
 
 //obtener datos de firebase  
 
-const retrieve = (estado) => {
+const retrieve = (state) => {
 
     return new Promise((resolve, reject) => {
-        data.where("estado", "==", estado)
+        data.where("state", "==", state)
             .get()
             .then(function (querySnapshot) {
                 let orders = [];
                 querySnapshot.forEach(function (doc) {
-                    orders.push(doc.data())
-                    console.log(doc.id, " => ", doc.data());
+                    let data=doc.data()
+                    data["id"]=doc.id
+                    orders.push(data)
+
                 });
                 resolve(orders)
             })
