@@ -1,0 +1,127 @@
+{
+    "coffee": [
+        {
+            "name": "Americano",
+            "price": 500,
+            "id": 1
+        },
+        {
+            "name": "Expresso",
+            "price": 500,
+            "id": 2
+        },
+        {
+            "name": "Veggie Latte",
+            "price": 700,
+            "id": 3
+        }
+    ],
+    "sandwiches": [  
+        {
+            "name": "Tofu",
+            "price": 1000,
+            "id": 4
+        }, 
+        {
+            "name": "Seitan",
+            "price": 1000,
+            "id": 5
+        },
+        {
+            "name": "Soya",
+            "price": 1000,
+            "id": 6
+        }     
+    ],
+    "burgers": [
+        {
+            "name": "SIMPLE Quinoa",
+            "price": 1500,
+            "id": 7
+        },
+        {
+            "name": "SIMPLE Lentejas",
+            "price": 1500,
+            "id": 8
+        },
+        {
+            "name": "SIMPLE Seitán",
+            "price": 1500,
+            "id": 9
+        },
+        {
+            "name": "SIMPLE Soya",
+            "price": 1500,
+            "id": 10
+        },
+        {
+            "name": "DOBLE Quinoa",
+            "price": 2500,
+            "id": 11
+        },
+        {
+            "name": "DOBLE Lentejas",
+            "price": 2500,
+            "id": 12
+        },
+        {
+            "name": "DOBLE Seitán",
+            "price": 2500,
+            "id": 13
+        },
+        {
+            "name": "DOBLE Soya",
+            "price": 2500,
+            "id": 14
+        },
+        {
+            "name": "+ Queso Vegano",
+            "price": 500,
+            "id": 15
+        },
+        {
+            "name": "+ Palta",
+            "price": 500,
+            "id": 16
+        }
+    ],
+    "sideDishes": [
+        {
+            "name": "Papas Fritas",
+            "price": 500,
+            "id": 17
+        },
+        {
+            "name": "Onion Rings",
+            "price": 500,
+            "id": 18
+        }
+    ],
+    "drinks": [
+        {
+            "name": "Agua 500ml",
+            "price": 500,
+            "id": 19
+        },
+        {
+            "name": "Agua 750ml",
+            "price": 800,
+            "id": 20
+        },
+        {
+            "name": "Gaseosa 500ml",
+            "price": 700,
+            "id": 21
+        },
+        {
+            "name": "Gaseosa 750ml",
+            "price": 1000,
+            "id": 22
+        },
+        {
+            "name": "Jugo natural",
+            "price": 700,
+            "id": 23
+        }
+    ]
+}
