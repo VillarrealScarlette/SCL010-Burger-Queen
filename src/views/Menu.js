@@ -70,7 +70,7 @@ export default class Menu extends Component {
 
   addOrders = (e) => {
     let orders=this.state.rows;
-    orders.push({products:e.name,
+    orders.push({name:e.name,
     price:`$${e.price}`});
     this.setState({rows:orders});
     let currentTotal = this.state.total;
@@ -82,13 +82,14 @@ export default class Menu extends Component {
   sentOrder = () => {
    let orderReady =
     {order: this.state.rows,
-    waiter:this.state.waiter,
-    table:"hola",
+    waiter:"Luna",
+    table:"5",
     state:"kitchen"
     }
     const db = firebase.firestore();
     db.collection("orders").add(orderReady)
   }
+  
 
   render() {
     return (
@@ -137,7 +138,7 @@ export default class Menu extends Component {
           <TableBody>
             {this.state.rows.map(row => (
               <TableRow key={row.product}>
-                <TableCell>{row.products}</TableCell>
+                <TableCell>{row.name}</TableCell>
                 <TableCell>{row.price}</TableCell>
               </TableRow>
             ))}
