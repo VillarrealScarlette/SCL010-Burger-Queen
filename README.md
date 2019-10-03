@@ -1,4 +1,4 @@
-# Proyecto
+[15:26, 10/3/2019] Caro Medina Laboratoria: # Proyecto
 
 ## Preámbulo
 
@@ -9,7 +9,31 @@ interfaz donde puedan tomar pedidos usando una tablet.
 Como punto de partida,
 nos comparten el siguiente correo recibido del cliente:
 
-> Somos **Burguer Queen**, una cadena de comida rápida 24hrs.
+> Somos Burguer Queen, una cadena de comida rápida 24hrs.
+>
+> Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida, y para
+> expandirnos necesitamos un sistema que nos ayude a tomar los pedidos de los
+> clientes.
+>
+> Tenemos 2 menús: uno para el desayuno, que es bien sencillo:
+>
+> | Item                      |Precio|
+> |---------------------------|------|
+> | Americano                 | 500  |
+> | Expresso                  | 500  |
+…
+[15:46, 10/3/2019] Caro Medina Laboratoria: # Proyecto
+
+## Preámbulo
+
+Nos acaban de enviar un correo con una solicitud para un nuevo proyecto. Hay un
+restaurante que nos ha contactado porque quieren que alguien les construya una
+interfaz donde puedan tomar pedidos usando una tablet.
+
+Como punto de partida,
+nos comparten el siguiente correo recibido del cliente:
+
+> Somos Burguer Queen, una cadena de comida rápida 24hrs.
 >
 > Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida, y para
 > expandirnos necesitamos un sistema que nos ayude a tomar los pedidos de los
@@ -63,7 +87,7 @@ nos comparten el siguiente correo recibido del cliente:
 > </table>
 >
 > Los clientes pueden escoger entre hamburguesas de quinoa, de lentejas, de seitan o de soya.
-> **Y por $500 pueden agregarle queso vegeno o palta.**
+> Y por $500 pueden agregarle queso vegeno o palta.
 >
 > Nuestros clientes son bastante indecisos, por lo que es muy común que cambien el
 > pedido varias veces antes de finalizarlo.
@@ -91,6 +115,16 @@ En tanto el módulo de cocina recibirá las órdenes que ingresan en tiempo real
 > Prueba VurgerQueen [aquí](https://villarrealscarlette.github.io/SCL010-Burger-Queen/)
 
 ### Modo de uso
+
+Nuestro usuario principal son los garzon@s que como primera experiencia se encontraran con la pagina principal que les da la opcion de ver el MENU, al cliclear en ella, les dara la opcion de filtrar por desayuno o almuerzo segun el caso, existe al costado izquierdo de la pantalla caja de llenado de texto donde pregunta el nombre del mesero y el numero de mesa que esta asistiendo.
+A continuacion se puede ver el ejemplo al entrar en la opcion del MENU de la App
+
+<img src="https://i.ibb.co/w07pxhQ/Whats-App-Image-2019-10-03-at-14-41-33.jpg" alt="Whats-App-Image-2019-10-03-at-14-41-33" border="0">
+
+ Luego de elegir la opcion de MENU, filtra entre DESAYUNO O ALMUERZO.  Si el usuario opta ALMUERZO, la aplicacion entregara tres clasificaciones HAMBURGUESAS, ACOMPAÑAMIENTOS y BEBESTIBLES. En esta interfaz se pueden selecionar los botones con el nombre de la comida ordenada por el cliente, de modo sincrono se muestra a un costado derecho de la pantalla la lista de pedido donde se muestra el producto seleccionado en orden con su valor correspondiente y el total del valor de la orden del cliente.
+A continuacion se muestra un ejemplo, donde muestra las opciones de los productos del menu elegido y la lista de la orden con su valor individual y total de la cuenta.
+
+ <img src="https://i.ibb.co/yX0GF3H/Whats-App-Image-2019-10-03-at-14-41-33-2.jpg" alt="Whats-App-Image-2019-10-03-at-14-41-33-2" border="0">
 
 ### Planificación de la solución
 

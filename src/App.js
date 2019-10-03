@@ -39,7 +39,7 @@ function App() {
     <div>
     <Grid container spacing={12}>
       <Grid item xs={12}>
-        <h1 className="title">Vurger queen</h1>
+        <h1 className="title">VurgerQueen</h1>
       </Grid>
      <Router>
       <div className={classes.root}>
