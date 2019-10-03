@@ -1,28 +1,4 @@
-[15:26, 10/3/2019] Caro Medina Laboratoria: # Proyecto
-
-## Preámbulo
-
-Nos acaban de enviar un correo con una solicitud para un nuevo proyecto. Hay un
-restaurante que nos ha contactado porque quieren que alguien les construya una
-interfaz donde puedan tomar pedidos usando una tablet.
-
-Como punto de partida,
-nos comparten el siguiente correo recibido del cliente:
-
-> Somos Burguer Queen, una cadena de comida rápida 24hrs.
->
-> Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida, y para
-> expandirnos necesitamos un sistema que nos ayude a tomar los pedidos de los
-> clientes.
->
-> Tenemos 2 menús: uno para el desayuno, que es bien sencillo:
->
-> | Item                      |Precio|
-> |---------------------------|------|
-> | Americano                 | 500  |
-> | Expresso                  | 500  |
-…
-[15:46, 10/3/2019] Caro Medina Laboratoria: # Proyecto
+# Proyecto
 
 ## Preámbulo
 
