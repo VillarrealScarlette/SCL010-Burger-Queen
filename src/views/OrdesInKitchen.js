@@ -29,19 +29,19 @@ class OrdersInKitchen extends React.Component {
   }
    
   changeState=(e)=>{
-    let id= e.currentTarget.value
 
+    let id= e.currentTarget.value
     const db = firebase.firestore();
     const data = db.collection('orders');
     data.doc(id).set({
       state:"ready"
-  }, { merge: true })
-  .then (
-    ()=>{
+      }, 
+      { merge: true })
+    .then (()=>{
       this.componentDidMount();
+      }
+     )
     }
-  )
-  }
 
   render() { 
 
@@ -51,43 +51,40 @@ class OrdersInKitchen extends React.Component {
       let dateCreate= (date.getDate() + " de " + month[date.getMonth()] + " de " + date.getFullYear());
       let time = date.getHours() + ":" + date.getMinutes();   
       return (
-
+        
         <div className="post">
+          <div className="postfont">
+          <p>Mesero: {item.waiter}</p> 
+          <p>Mesa: {item.table}</p> 
+          <p>Fecha: {dateCreate}</p> 
+          <p>Hora: {time}</p>  
+         <h4>Pedido:</h4> 
+         </div>
+         <Paper>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Productos</TableCell>
+                  <TableCell>Valor</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <Products orders={item.order}></Products>
+              </TableBody>
+            </Table>
+          </Paper>
        
-             <h4>mesero: {item.waiter}</h4> 
-             <h4>mesa: {item.table}</h4> 
-             <h4>fecha: {dateCreate}</h4> 
-             <h4>hora: {time}</h4>  
-             <h5>pedido:</h5> 
-            
-    <Paper>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Productos</TableCell>
-            <TableCell>Valor</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          <Products orders={item.order}></Products>
-        </TableBody>
-      </Table>
-    </Paper>
-     
-             <Button value={item.id} onClick={this.changeState}>Pedido Listo</Button>
-                 
+          <Button className="button" value={item.id} onClick={this.changeState}>Pedido Listo</Button>         
         </div>        
       )
     })
-    return ( 
+     return ( 
       <div>
-        <p className="barMenu3">PEDIDOS PROCESANDOSE</p>
-
+        <p className="barMenu3">PROCESANDO PEDIDO EN COCINA</p>
           <Grid container spacing={1}>
-             {orders}
-            </Grid>
-            
-        </div>
+            {orders}
+          </Grid>
+      </div>
      );
   }
 }

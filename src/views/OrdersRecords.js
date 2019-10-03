@@ -37,15 +37,13 @@ class OrdersRecords extends React.Component {
       return (
 
         <div className="post">
-       
-             <h4>mesero: {item.waiter}</h4> 
-             <h4>mesa: {item.table}</h4> 
-             <h4>fecha: {dateCreate}</h4> 
-             <h4>hora: {time}</h4>  
- 
- 
-             <h5>pedido:</h5> 
-            
+             <div className="postfont">
+             <p>mesero: {item.waiter}</p> 
+             <p>mesa: {item.table}</p> 
+             <p>fecha: {dateCreate}</p> 
+             <p>hora: {time}</p>  
+             <h4>pedido:</h4> 
+             </div>
     <Paper>
       <Table>
         <TableHead>
@@ -65,12 +63,10 @@ class OrdersRecords extends React.Component {
     })
     return ( 
       <div>
-        <h2>PEDIDOS PROCESANDOSE</h2>
-
+      <p className="barMenu3">HISTORIAL DE PEDIDOS </p>
           <Grid container spacing={1}>
              {orders}
-            </Grid>
-            
+            </Grid>     
         </div>
      );
   }

@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import '../App.css';
 import { BrowserRouter as Router, Route} from "react-router-dom";
-import LinkTab from './LinkTab';
 import Breakfast from '../components/menu/Breakfast';
 import Lunch from '../components/menu/Lunch';
 
 //importando material-iu
+import LinkTab from './LinkTab';
 import Tabs from '@material-ui/core/Tabs';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';

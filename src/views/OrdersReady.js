@@ -41,10 +41,10 @@ class OrdersReady extends React.Component {
       return (
 
         <div className="post">
-       
-             <h4>mesero: {item.waiter}</h4> 
-             <h4>mesa: {item.table}</h4>  
-      
+              <div className="postfont">
+             <p>mesero: {item.waiter}</p> 
+             <p>mesa: {item.table}</p>  
+             </div>
              <Button value={item.id} onClick={this.changeState}>para entregar</Button>
                  
         </div>        
@@ -52,8 +52,7 @@ class OrdersReady extends React.Component {
     })
     return ( 
       <div>
-        <h2>PEDIDOS PROCESANDOSE</h2>
-
+         <p className="barMenu3">PEDIDOS PARA ENTREGAR A CLIENTES</p>
           <Grid container spacing={1}>
              {orders}
             </Grid>
