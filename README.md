@@ -127,7 +127,7 @@ Posteriormente se diseñó el prototipo de alta fidelidad según estos criterios
 
 - La data fue almacenada en [Firebase](https://firebase.google.com/) (versión 7.0.0).
 
-### Este proyecto fue esarrollado por
+### Este proyecto fue desarrollado por
 
 - [Anabel Carrión J.](https://github.com/anabelcarrion)
 - [Carolina Medina S.](https://github.com/CarolinaMedin)
